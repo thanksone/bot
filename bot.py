@@ -54,7 +54,6 @@ def hsh(S : str):
 	return H;
 def yellow(msg : str):
 	S = hsh(msg);
-	print(S);
 	for [k, w] in KW:
 		for i in range(1, len(S) - w + 1):
 			if k == (S[i + w - 1] - S[i - 1] + mod) % mod:
@@ -77,6 +76,5 @@ async def on_message(msg : discord.Message):
 		print("業績 + 1");
 		await msg.channel.send(file = discord.File("swipe.png"));
 		await msg.channel.send(file = discord.File("yellow.png"));
-	print("fin");
 if __name__ == "__main__":
 	bot.run(T);
